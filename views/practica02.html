@@ -1,0 +1,58 @@
+<%- include('partials/encabezado.html'); %>
+<body onload="mostrarT()">
+    <div class="container">
+        <section id="lista">
+            <center>
+            <h2>
+                Listado de alumnos
+            </h2><br>
+            </center>
+            <table class="table" id="tabla">
+               <tr>
+                    <th>ID</th>
+                    <th>Matricula</th>
+                    <th>Nombre</th>
+                    <th>Domicilio</th>
+                    <th>Sexo</th>
+                    <th>Especialidad</th>
+               </tr>
+            
+            </table>
+        </section>
+        
+        <section id="datos">
+            <div>
+                
+                <form >
+                    <div>
+                        
+                        <input type="number" name="matricula" id="matricula" placeholder="Matricula" required="true" >
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" >
+                        <input type="text" name="domicilio" id="Domicilio" placeholder="Domicilio">
+                        <select name="sexo" id="sexo">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                        <input type="text" name="especialidad" id="Especialidad" placeholder="Especialidad" >
+                    </div>
+                    <br>
+                    
+                </form>
+                <button id="btnBuscar" onclick="buscar()" style="float:left;">Buscar</button>
+            </div>
+            <div style="float:right;">
+                <button id="btnAgregar" onclick="agregarAlumno()">Agregar</button>
+                <button id="btnBorrar" onclick="eliminar()">Borrar</button>
+                <button id="btnModificar" onclick="modificar()">Modificar</button>
+            </div>
+        </section>
+    </div>
+
+    <%- include('partials/piePagina.html'); %>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/axios.js"></script>
+    <script>
+      
+    </script>
+</body>
+</html>
